@@ -62,7 +62,7 @@ All versions of bibutils are relased under the GNU Public License (GPL) version 
 
 ## Compilation
 
-### Configure the makefile by running the configure script.
+### 1. Configure the makefile by running the configure script
 
 The configure script attempts to auto-identify your operating system
 and does a reasonable job for a number of platforms (including x86 Linux,
@@ -128,13 +128,13 @@ real machine and distribution specific knowledge for handling the dynamic
 library installation and usage.  All of the distributed binaries are statically
 linked for obvious reasons.
 
-## Make the package with make
+### Make the package using `make`
 
 ```shell
 make
 ```
 
-### Install the package
+### Install the package using `make`
 
 ```shell
 make install
