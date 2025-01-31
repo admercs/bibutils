@@ -22,7 +22,7 @@ The Library of Congress's Metadata Object Description Schema (MODS) XML format i
 | `endx2xml`      |    convert EndNote XML to MODS XML intermediate                                |
 | `isi2xml`       |    convert ISI web of science to MODS XML intermediate                         |
 | `med2xml`       |    convert Pubmed XML references to MODS XML intermediate                      |
-| `modsclean` 	  |    a MODS to MODS converter for testing puposes mostly                         |
+| `modsclean`     |    a MODS to MODS converter for testing puposes mostly                         |
 | `nbib2xml`      |    convert Pubmed/NLM nbib format to MODS XML intermedidate                    |
 | `ris2xml`       |    convert RIS format to MODS XML intermediate                                 |
 | `xml2ads`       |    convert MODS XML intermediate into SAO/NASA ADS reference format            |
@@ -36,14 +36,14 @@ The Library of Congress's Metadata Object Description Schema (MODS) XML format i
 
 ## Development History
 
-Version 8. Forked from the original project at version 7.2.
-Version 7. Library changes forced change of major version.
-Version 6. Library changes forced change of major version.
-Version 5. User visible changes change default input and output character set to UTF-8 Unicode and ability to write MODS XML in multiple character sets.
-Version 4. User visible changes are alteration of library API.
-Version 3.
-Version 2.
-Version 1.
+Version 8: Forked from the original project at version 7.2.
+Version 7: Library changes forced change of major version.
+Version 6: Library changes forced change of major version.
+Version 5: Change default input and output character set to UTF-8 and ability to write MODS XML in multiple character sets.
+Version 4: Alteration of library API.
+Version 3
+Version 2
+Version 1
 
 ## Frequently Asked Questions
 
@@ -58,7 +58,7 @@ This stuff is great, how can I help? OK, I actually don't get this question so o
 I am interested in bug reports and problems in conversions. Feel free to e-mail me if you run into these issues. The absolute best bug reports provide error messages from the operating systems and/or input and outputs that detail the problems. Please remember that I'm not looking over your shoulder and I cannot read your mind to figure out what you are doing--"It doesn't work." isn't a bug report I can help you with.
 License
 
-All versions of bibutils are relased under the GNU Public License (GPL) version 2. In a nutshell, feel free to download, run, and modify these programs as required. If you re-release these, you need to release the modified version of the source. (And I'd appreciate patches as well...if you care enough to make the change, then I'd like to see what you're adding or fixing.)
+All versions of bibutils are relased under the `GNU Public License (GPL) Version 2`. In a nutshell, feel free to download, run, and modify these programs as required. If you re-release these, you need to release the modified version of the source. (And I'd appreciate patches as well...if you care enough to make the change, then I'd like to see what you're adding or fixing.)
 
 ## Compilation
 
@@ -66,8 +66,8 @@ All versions of bibutils are relased under the GNU Public License (GPL) version 
 
 The configure script attempts to auto-identify your operating system
 and does a reasonable job for a number of platforms (including x86 Linux,
-versions of MacOSX, some BSDs, Sun Solaris, and SGI IRIX).  It's not a 
-full-fledged configure script via the autoconf system, but is more than 
+versions of MacOSX, some BSDs, Sun Solaris, and SGI IRIX).  It's not a
+full-fledged configure script via the autoconf system, but is more than
 sufficient for Bibutils.
 
 Unlike a lot of programs, Bibutils is written in very vanilla ANSI C
@@ -85,7 +85,7 @@ configure
 or alternatively
 
 ```shell
-sh -f configure
+sh -f configure.sh
 ```
 
 The output should look something like:
@@ -141,4 +141,3 @@ make install
 ```
 
 Note that `make install` won't install the libraries with statically-linked binaries but will (naturally) with dynamically-linked binaries.
-
