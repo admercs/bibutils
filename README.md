@@ -79,10 +79,10 @@ e-mail me the output of 'uname -a' and I'll work on adding it.
 To configure the makefile, simply run:
 
 ```shell
-configure
+configure.sh
 ```
 
-or alternatively
+or alternatively:
 
 ```shell
 sh -f configure.sh
