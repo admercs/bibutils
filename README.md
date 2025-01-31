@@ -128,13 +128,13 @@ real machine and distribution specific knowledge for handling the dynamic
 library installation and usage.  All of the distributed binaries are statically
 linked for obvious reasons.
 
-### Make the package using `make`
+### 2. Make the package using `make`
 
 ```shell
 make
 ```
 
-### Install the package using `make`
+### 3. Install the package using `make`
 
 ```shell
 make install
