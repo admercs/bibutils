@@ -33,7 +33,6 @@ The Library of Congress's Metadata Object Description Schema (MODS) XML format i
 | `xml2nbib`      |    convert MODS XML intermediate to Pubmed/NLM nbib format                     |
 | `xml2ris`       |    convert MODS XML intermediate into RIS format                               |
 | `xml2wordbib`   |    convert MODS XML intermediate into Word 2007 bibliography format            |
-| ------------------------------------------------------------------------------------------------ |
 
 ## Development History
 
