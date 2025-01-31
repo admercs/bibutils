@@ -1,5 +1,7 @@
 # bibutils
 
+Updated by Adam Erickson
+
 ## Description
 
 The bibutils program set interconverts between various bibliography formats using a common MODS-format XML intermediate. For example, one can convert RIS-format files to Bibtex by doing two transformations: RIS->MODS->Bibtex. By using a common intermediate for N formats, only 2N programs are required and not N²-N. These programs operate on the command line and are styled after standard UNIX-like filters.
@@ -10,26 +12,28 @@ The Library of Congress's Metadata Object Description Schema (MODS) XML format i
 
 ## Programs
 
-Program 	Description
-bib2xml 	convert BibTeX to MODS XML intermediate
-biblatex2xml 	convert BibLaTeX to MODS XML intermediate
-bibdiff 	compare two bibliographies after reading into the bibutils internal format
-copac2xml 	convert COPAC format references to MODS XML intermediate
-end2xml 	convert EndNote (Refer format) to MODS XML intermediate
-endx2xml 	convert EndNote XML to MODS XML intermediate
-isi2xml 	convert ISI web of science to MODS XML intermediate
-med2xml 	convert Pubmed XML references to MODS XML intermediate
-modsclean 	a MODS to MODS converter for testing puposes mostly
-nbib2xml 	convert Pubmed/National Library of Medicine nbib format to MODS XML intermedidate
-ris2xml 	convert RIS format to MODS XML intermediate
-xml2ads 	convert MODS XML intermediate into Smithsonian Astrophysical Observatory (SAO)/National Aeronautics and Space Administration (NASA) Astrophyics Data System or ADS reference format (converter submitted by Richard Mathar)
-xml2bib 	convert MODS XML intermediate into BibTeX
-xml2biblatex 	convert MODS XML intermediate into BibLaTeX
-xml2end 	convert MODS XML intermediate into format for EndNote
-xml2isi 	convert MODS XML intermediate to ISI format
-xml2nbib 	convert MODS XML intermediate to Pubmed/National Library of Medicine nbib format
-xml2ris 	convert MODS XML intermediate into RIS format
-xml2wordbib 	convert MODS XML intermediate into Word 2007 bibliography format
+Program 	    Description
+---
+`bib2xml` 	    convert BibTeX to MODS XML intermediate
+`biblatex2xml` 	convert BibLaTeX to MODS XML intermediate
+`bibdiff` 	    compare two bibliographies after reading into the bibutils internal format
+`copac2xml` 	    convert COPAC format references to MODS XML intermediate
+`end2xml` 	    convert EndNote (Refer format) to MODS XML intermediate
+`endx2xml` 	    convert EndNote XML to MODS XML intermediate
+`isi2xml` 	    convert ISI web of science to MODS XML intermediate
+`med2xml` 	    convert Pubmed XML references to MODS XML intermediate
+`modsclean` 	    a MODS to MODS converter for testing puposes mostly
+`nbib2xml` 	    convert Pubmed/National Library of Medicine nbib format to MODS XML intermedidate
+`ris2xml` 	    convert RIS format to MODS XML intermediate
+`xml2ads` 	    convert MODS XML intermediate into Smithsonian Astrophysical Observatory (SAO)/National Aeronautics and Space Administration (NASA) Astrophyics Data System or ADS reference format (converter submitted by Richard Mathar)
+`xml2bib` 	    convert MODS XML intermediate into BibTeX
+`xml2biblatex` 	convert MODS XML intermediate into BibLaTeX
+`xml2end` 	    convert MODS XML intermediate into format for EndNote
+`xml2isi` 	    convert MODS XML intermediate to ISI format
+`xml2nbib` 	    convert MODS XML intermediate to Pubmed/National Library of Medicine nbib format
+`xml2ris` 	    convert MODS XML intermediate into RIS format
+`xml2wordbib` 	convert MODS XML intermediate into Word 2007 bibliography format
+---
 
 ## Development History
 
@@ -57,12 +61,9 @@ License
 
 All versions of bibutils are relased under the GNU Public License (GPL) version 2. In a nutshell, feel free to download, run, and modify these programs as required. If you re-release these, you need to release the modified version of the source. (And I'd appreciate patches as well...if you care enough to make the change, then I'd like to see what you're adding or fixing.)
 
-## Installation
+## Compilation
 
-                              COMPILING BIBUTILS.
-
-------------------------------------------------------------------------
-STEP 1.  Configure the makefile by running the configure script.
+### Configure the makefile by running the configure script.
 
 The configure script attempts to auto-identify your operating system
 and does a reasonable job for a number of platforms (including x86 Linux,
@@ -78,42 +79,46 @@ e-mail me the output of 'uname -a' and I'll work on adding it.
 
 To configure the makefile, simply run:
 
-% configure
+```shell
+configure
+```
 
 or alternatively
 
-% sh -f configure
+```shell
+sh -f configure
+```
 
 The output should look something like:
 
-'
-'Bibutils Configuration
-'----------------------
-'
-'Operating system:               Linux_x86_64
-'Library and binary type:        static
-'Binary installation directory:  /usr/local/bin
-'Library installation directory: /usr/local/lib
-'
-' - If auto-identification of operating system failed, e-mail cdputnam@ucsd.edu
-'   with the output of the command: uname -a
-'
-' - Use --static or --dynamic to specify library and binary type;
-'   the --static option is the default
-'
-' - Set binary installation directory with:  --install-dir DIR
-'
-' - Set library installation directory with: --install-lib DIR
-'
-'
-'To compile,                  type: make
-'To install,                  type: make install
-'To make tgz package,         type: make package
-'To make deb package,         type: make deb
-'
-'To clean up temporary files, type: make clean
-'To clean up all files,       type: make realclean
+```shell
+Bibutils Configuration
+----------------------
 
+Operating system:               Linux_x86_64
+Library and binary type:        static
+Binary installation directory:  /usr/local/bin
+Library installation directory: /usr/local/lib
+
+ - If auto-identification of operating system failed, e-mail cdputnam@ucsd.edu
+   with the output of the command: uname -a
+
+ - Use --static or --dynamic to specify library and binary type;
+   the --static option is the default
+
+ - Set binary installation directory with:  --install-dir DIR
+
+ - Set library installation directory with: --install-lib DIR
+
+
+To compile,                  type: make
+To install,                  type: make install
+To make tgz package,         type: make package
+To make deb package,         type: make deb
+
+To clean up temporary files, type: make clean
+To clean up all files,       type: make realclean
+```
 
 By default, the configure script generates Makefiles to generate statically
 linked binaries.  These binaries are the largest, but require no management of
@@ -124,16 +129,17 @@ real machine and distribution specific knowledge for handling the dynamic
 library installation and usage.  All of the distributed binaries are statically
 linked for obvious reasons.
 
------------------------------------------------------------------------
-STEP 2.  Make the package with make
+## Make the package with make
 
-% make
+```shell
+make
+```
 
-----------------------------------------------------------------------
-STEP 3.  Install the package
+### Install the package
 
-% make install
+```shell
+make install
+```
 
-Note that 'make install' won't install the libraries with statically-
-linked binaries but will (naturally) with dynamically-linked binaries.
+Note that `make install` won't install the libraries with statically-linked binaries but will (naturally) with dynamically-linked binaries.
 
